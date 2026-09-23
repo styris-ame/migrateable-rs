@@ -228,6 +228,7 @@ checksum = "92773504d58c093f6de2459af4af33faa518c13451eb8f2b5698ed3d36e7c813"
 [[package]]
 name = "easy_rkyv"
 version = "0.1.0"
+source = "git+https://github.com/styris-ame/easy-rkyv#1383ca5ff1869c80d2c217b7ec65ba169d036440"
 dependencies = [
  "anyhow",
  "bytes",
@@ -305,6 +306,7 @@ dependencies = [
 [[package]]
 name = "fjall_expanded"
 version = "0.1.0"
+source = "git+https://github.com/styris-ame/fjall-expanded#c3dc16d095f145b8f8b730e9bd19b5b0374ac8ae"
 dependencies = [
  "anyhow",
  "arc-swap",
@@ -317,7 +319,7 @@ dependencies = [
  "fs4",
  "jiff",
  "log",
- "migrateable",
+ "migrateable 0.1.0 (git+https://github.com/styris-ame/migrateable-rs)",
  "rkyv",
  "storekey",
  "tar",
@@ -329,6 +331,7 @@ dependencies = [
 [[package]]
 name = "fjall_expanded_derive"
 version = "0.1.0"
+source = "git+https://github.com/styris-ame/fjall-expanded#c3dc16d095f145b8f8b730e9bd19b5b0374ac8ae"
 dependencies = [
  "proc-macro-crate",
  "proc-macro2",
@@ -660,7 +663,7 @@ dependencies = [
  "fjall",
  "fjall_expanded",
  "hashed-type-def",
- "migrateable_derive",
+ "migrateable_derive 0.1.0",
  "rkyv",
  "rmp-serde",
  "serde",
@@ -670,8 +673,34 @@ dependencies = [
 ]
 
 [[package]]
+name = "migrateable"
+version = "0.1.0"
+source = "git+https://github.com/styris-ame/migrateable-rs#d3861fdd98c6f1891297d057a6d402c3f292ad56"
+dependencies = [
+ "anyhow",
+ "fjall",
+ "hashed-type-def",
+ "migrateable_derive 0.1.0 (git+https://github.com/styris-ame/migrateable-rs)",
+ "typeid",
+]
+
+[[package]]
 name = "migrateable_derive"
 version = "0.1.0"
+dependencies = [
+ "convert_case",
+ "proc-macro-crate",
+ "proc-macro2",
+ "quote",
+ "strum",
+ "strum_macros",
+ "syn",
+]
+
+[[package]]
+name = "migrateable_derive"
+version = "0.1.0"
+source = "git+https://github.com/styris-ame/migrateable-rs#d3861fdd98c6f1891297d057a6d402c3f292ad56"
 dependencies = [
  "convert_case",
  "proc-macro-crate",
