@@ -265,7 +265,7 @@ pub fn derive_migrateable(input: TokenStream) -> TokenStream {
                     Ok(data.into_bytes())
                 }
                 fn deserialize(&self, bytes: &'de [u8]) -> #migrateable_path::MigrateResult<String> {
-                    Ok(String::from_utf8(bytes.to_vec()).map_err(|e| #migrateable_path::migrate_error!(e))?)
+                    String::from_utf8(bytes.to_vec()).map_err(|e| #migrateable_path::migrate_error!(e))
                 }
             }
         };
